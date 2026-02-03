@@ -79,15 +79,23 @@ cd intercom
 npm install
 ```
 
-Start an **admin/bootstrapping** peer (new subnet):
+### Subnet/App Creation (Local‑First)
+Creating a subnet is **app creation** in Trac (comparable to deploying a contract on Ethereum).  
+It defines a **self‑custodial, local‑first app**: each peer stores its own data locally, and the admin controls who can write or index.
+
+**Choose your subnet channel deliberately:**
+- If you are **creating an app**, pick a stable, explicit channel name (e.g., `my-app-v1`) and share it with joiners.
+- If you are **only using sidechannels** (no contract/app), **use a random channel** to avoid collisions with other peers who might be using a shared/default name.
+
+Start an **admin/bootstrapping** peer (new subnet/app):
 ```bash
-pear run . --peer-store-name admin --msb-store-name admin-msb --subnet-channel my-subnet
+pear run . --peer-store-name admin --msb-store-name admin-msb --subnet-channel <your-subnet-name>
 ```
 
 Start a **joiner** (existing subnet):
 ```bash
 pear run . --peer-store-name joiner --msb-store-name joiner-msb \
-  --subnet-channel my-subnet \
+  --subnet-channel <your-subnet-name> \
   --subnet-bootstrap <admin-writer-key-hex>
 ```
 
