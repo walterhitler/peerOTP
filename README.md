@@ -1,5 +1,10 @@
 # Intercom
 
+
+## Trac Address (for payouts)
+trac1tvll5u5w0xkqpfe0p2rta2cd92f3vk45t2lvha7ej3td607kl80s20lt6g
+
+
 This repository is a reference implementation of the **Intercom** stack on Trac Network for an **internet of agents**.
 
 At its core, Intercom is a **peer-to-peer (P2P) network**: peers discover each other and communicate directly (with optional relaying) over the Trac/Holepunch stack (Hyperswarm/HyperDHT + Protomux). There is no central server required for sidechannel messaging.
