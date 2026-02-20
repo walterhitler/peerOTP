@@ -1,0 +1,27 @@
+{
+  "name": "peerotp",
+  "version": "1.0.0",
+  "description": "P2P TOTP shared secret distributor — share one-time password secrets across devices via Hyperswarm. No Google Authenticator. No Authy. No cloud.",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    "setup": "node index.js --mode setup",
+    "token": "node index.js --mode token",
+    "share": "node index.js --mode share",
+    "watch": "node index.js --mode watch"
+  },
+  "keywords": [
+    "p2p", "hyperswarm", "totp", "otp", "2fa",
+    "authenticator", "trac", "intercom", "termux", "privacy"
+  ],
+  "author": "[INSERT_YOUR_TRAC_ADDRESS_HERE]",
+  "license": "MIT",
+  "dependencies": {
+    "hyperswarm": "^4.7.15",
+    "hypercore-crypto": "^3.4.2",
+    "b4a": "^1.6.7",
+    "minimist": "^1.2.8"
+  },
+  "engines": { "node": ">=18.0.0" }
+}
